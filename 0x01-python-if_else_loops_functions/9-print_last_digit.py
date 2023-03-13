@@ -5,4 +5,6 @@ def print_last_digit(number):
         if number < 0:
             n = -n
             print(n)
+        else:
+            print(n)
     return(n)
