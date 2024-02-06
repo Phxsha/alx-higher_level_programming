@@ -20,8 +20,7 @@ class Student:
     def to_json(self, attrs=None):
         """Get a dictionary representation of a student.
 
-        If attrs is a list of strings, represents attributes only 
-        included in the list.
+        If attrs is a list of strings, represents attributes only included in the list.
 
         Args:
             attrs (list): (Optional) attribute to represent.
