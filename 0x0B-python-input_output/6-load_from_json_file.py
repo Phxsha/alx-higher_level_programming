@@ -7,4 +7,3 @@ def load_from_json_file(filename):
     """Loads an object to a file using json"""
     with open(filename) as file:
         return json.load(file)
-
