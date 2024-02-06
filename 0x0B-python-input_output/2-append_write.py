@@ -2,7 +2,7 @@
 """Defines a text file appending function"""
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Function that appends to a file.
 
     Args:
