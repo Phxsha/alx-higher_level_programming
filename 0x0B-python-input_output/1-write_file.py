@@ -9,7 +9,7 @@ def read_file(filename="", text=""):
         filename (any): The file to write on.
         text (string): text to write to the file.
     Return:
-        Written file..
+        Written file.
     """
     with open(filename, mode='w', encoding='UTF-8') as file:
         return file.write(text)
