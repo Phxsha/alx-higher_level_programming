@@ -2,7 +2,7 @@
 """Defines a text file writing function"""
 
 
-def read_file(filename="", text=""):
+def write_file(filename="", text=""):
     """Function that writes to a file.
 
     Args:
