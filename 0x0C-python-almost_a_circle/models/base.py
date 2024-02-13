@@ -2,7 +2,7 @@
 """Defines a base Class for the id used in the project"""
 
 
-class Bass:
+class Base:
     """Base Class for managing id attribute"""
     __nb_objects = 0
 
