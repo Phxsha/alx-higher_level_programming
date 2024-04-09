@@ -1,14 +1,11 @@
 #!/usr/bin/node
-
-// Check if the first argument is provided and convert it to an integer
-const x = parseInt(process.argv[2]);
-
-// Check if the argument is a valid number
-if (isNaN(x) || x <= 0) {
+if (process.argv[2] === undefined || isNaN(process.argv[2])) {
   console.log('Missing number of occurrences');
 } else {
-  // Loop x times and print "C is fun"
-  for (let i = 0; i < x; i++) {
+  const x = Number(process.argv[2]);
+  let i = 0;
+  while (i < x) {
     console.log('C is fun');
+    i++;
   }
 }
