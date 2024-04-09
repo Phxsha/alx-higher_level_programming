@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Define the factorial function recursively
-function factorial(n) {
+function factorial (n) {
   // Base case: if n is NaN or less than 0, return 1
   if (isNaN(n) || n < 0) {
     return 1;
