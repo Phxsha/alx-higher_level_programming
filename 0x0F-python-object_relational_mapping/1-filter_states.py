@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     # Print the results
     for state in states:
-        print(state)
+        print("({}, '{}')".format(state[0], state[1]))
 
     # Close the cursor and database connection
     cursor.close()
