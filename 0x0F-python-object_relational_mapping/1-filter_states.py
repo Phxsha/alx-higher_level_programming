@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that lists all states with a name starting with N from the database hbtn_0e_0_usa
+Script that lists all states with a name starting with N
+from the database hbtn_0e_0_usa
 """
 import sys
 import MySQLdb
@@ -25,7 +26,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute SQL query to select states starting with 'N'
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+    cursor.execute(
+            "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
+            )
 
     # Fetch all rows
     states = cursor.fetchall()
