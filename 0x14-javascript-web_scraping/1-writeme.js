@@ -14,6 +14,6 @@ if (!filePath || !content) {
 // Write the content to the file in UTF-8 encoding
 fs.writeFile(filePath, content, 'utf-8', (error) => {
   if (error) {
-    console.error('Error writing to file:', error);
+    console.error(error);
   }
 });
