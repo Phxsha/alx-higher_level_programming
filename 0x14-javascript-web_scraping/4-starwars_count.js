@@ -1,29 +1,20 @@
 #!/usr/bin/node
-
+// Number of films with the given character ID
 const request = require('request');
+let num = 0;
 
-// Get the API URL from the command line arguments
-const apiUrl = process.argv[2];
-
-if (apiUrl) {
-  // Make a GET request to the API
-  request(apiUrl, (error, response, body) => {
-    if (error) {
-      console.error('Error:', error);
-      return;
-    }
-    // Parse the response body as JSON
-    const data = JSON.parse(body);
-    let count = 0;
-    // Iterate over the films and count the ones with Wedge Antilles (character ID 18)
-    data.results.forEach(film => {
-      if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-        count++;
-      }
+request.get(process.argv[2], (error, response, body) => {
+  if (error) {
+    console.log(error);
+  } else {
+    const content = JSON.parse(body);
+    content.results.forEach((film) => {
+      film.characters.forEach((character) => {
+        if (character.includes(18)) {
+          num += 1;
+        }
+      });
     });
-    // Print the count
-    console.log(count);
-  });
-} else {
-  console.error('Usage: ./4-starwars_count.js <API_URL>');
-}
+    console.log(num);
+  }
+});
